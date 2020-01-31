@@ -285,7 +285,7 @@ a:hover, a:focus, a:active {
 }
 @media screen and (max-width: 768px) {
   .fh5co-heading .fh5co-heading-intro {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 
@@ -1131,6 +1131,8 @@ hr {
 }
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
+
+
 
 
 
