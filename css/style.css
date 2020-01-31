@@ -1013,7 +1013,7 @@ a:hover, a:focus, a:active {
 .mb-md {
   margin-bottom: 2em !important;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 650px) {
   .mb-md {
     margin-bottom: 1em !important;
   }
@@ -1022,7 +1022,7 @@ a:hover, a:focus, a:active {
 .mb-lg {
   margin-bottom: 3em !important;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 650px) {
   .mb-lg {
     margin-bottom: 1em !important;
   }
@@ -1043,6 +1043,7 @@ a:hover, a:focus, a:active {
 
 /* Dropdown Button */
 .dropbtn {
+  position: left; 
   background-color: transparent;
   Color: white;
   font-size: 13px;
@@ -1053,8 +1054,12 @@ a:hover, a:focus, a:active {
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative; /* containing block for positioning */
+    display: inline; /* to fix IE's doubled float-margin bug */
+    float: left;
+    list-style: none;
+    padding: 0;
+    margin:0 20px 0 0;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -1109,7 +1114,21 @@ hr {
    width: 100%;
 }
 
+.burger {
+  display: none;
+}
+.menu {
+  display: block;
+}
 
+@media screen and (max-width: 775px) {
+  .burger {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+}
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
